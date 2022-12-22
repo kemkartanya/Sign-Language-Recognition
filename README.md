@@ -3,7 +3,7 @@ The model developed can classify any letter in the American Sign Language (ASL) 
 
 Using this model, we can easily convert the ASL into the respective English sentences.
 
-You can view the deployed version of the model [here](https://kemkartanya-sign-language-recognition-web-app-37mhhk.streamlit.app/.com/)
+You can view the deployed version of the model [here](https://kemkartanya-sign-language-recognition-web-app-37mhhk.streamlit.app)
 
 For a detailed explaination please refer [this](https://towardsdatascience.com/sign-language-to-text-using-deep-learning-7f9c8018c593) article
 
