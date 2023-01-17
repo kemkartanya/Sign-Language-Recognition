@@ -68,8 +68,8 @@ if image_file is not None:
     st.write(f'The image is predicted as {letter}')
 
 st.subheader('Convert images to English sentence')
-#sentence_image_files = st.file_uploader('Select the ASL Images', ['jpg', 'png'], accept_multiple_files = True)
-sentence_image_files = st.camera_input('Take pictures')
+sentence_image_files = st.file_uploader('Select the ASL Images', ['jpg', 'png'], accept_multiple_files = True)
+#sentence_image_files = st.camera_input('Take pictures')
 
 if len(sentence_image_files) > 0:
     sentence = ''
