@@ -58,7 +58,8 @@ st.markdown('For a detailed explaination please refer [this](https://towardsdata
 st.markdown('Use 28x28 images (size of the training images) to obtain the accurate results')
 
 st.subheader('Convert Image to English letter')
-image_file = st.file_uploader('Choose the ASL Image', ['jpg', 'png'])
+#image_file = st.file_uploader('Choose the ASL Image', ['jpg', 'png'])
+image_file = st.camera_input('Take a picture')
 
 if image_file is not None:
     image = Image.open(image_file).convert('L')
