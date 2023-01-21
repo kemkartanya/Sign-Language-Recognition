@@ -67,10 +67,10 @@ if image_file is not None:
     width, height = image.size
  
     # Setting the points for cropped image
-    left = 100
-    top = height / 2
+    left = 50
+    top = 50
     right = 200
-    bottom = height / 2
+    bottom = 200
  
     # Cropped image of above dimension
     # (It will not change original image)
