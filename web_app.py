@@ -35,8 +35,7 @@ def preprocess_image(image, image_file, best_model, label_binarizer):
     # To display the uploaded image
     # image_width = image.shape[0]
     # st.image(image_file, caption='Uploaded Image', width=max(image_width, 100))
-    image = image.crop((50, 50, 200, 200))
-    #image.show()
+    
     image = tf.reshape(image, [image.shape[0], image.shape[1], 1])
     image = image/255
     image = tf.image.resize(image, [28, 28], preserve_aspect_ratio=True)
@@ -64,6 +63,8 @@ image_file = st.camera_input('Take a picture')
 
 if image_file is not None:
     image = Image.open(image_file).convert('L')
+    image = image.crop((50, 50, 200, 200))
+    image.show()
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
     st.write(f'The image is predicted as {letter}')
