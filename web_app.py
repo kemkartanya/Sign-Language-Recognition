@@ -76,7 +76,7 @@ if image_file is not None:
     # (It will not change original image)
     image = image.crop((left, top, right, bottom))
     image = image.resize((28, 28))
-    image.show()
+    st.image(image)
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
     st.write(f'The image is predicted as {letter}')
