@@ -62,9 +62,9 @@ st.subheader('Convert Image to English letter')
 image_file = st.camera_input('Take a picture')
 
 if image_file is not None:
-    image = Image.open(image_file).convert('L')
     image = image.crop((50, 50, 200, 200))
-    image.show()
+    image = image.resize((28, 28))
+    image = Image.open(image_file).convert('L') #converting to gray scale image
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
     st.write(f'The image is predicted as {letter}')
