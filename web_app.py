@@ -63,8 +63,20 @@ image_file = st.camera_input('Take a picture')
 
 if image_file is not None:
     image = Image.open(image_file).convert('L') #converting to gray scale image
-    image = image.crop((50, 50, 200, 200))
+    # (This is not mandatory)
+    width, height = image.size
+ 
+    # Setting the points for cropped image
+    left = 5
+    top = height / 4
+    right = 164
+    bottom = 3 * height / 4
+ 
+    # Cropped image of above dimension
+    # (It will not change original image)
+    image = image.crop((left, top, right, bottom))
     image = image.resize((28, 28))
+    image.show()
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
     st.write(f'The image is predicted as {letter}')
