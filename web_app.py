@@ -35,7 +35,8 @@ def preprocess_image(image, image_file, best_model, label_binarizer):
     # To display the uploaded image
     # image_width = image.shape[0]
     # st.image(image_file, caption='Uploaded Image', width=max(image_width, 100))
-
+    image = image.crop((50, 50, 200, 200))
+    image.show()
     image = tf.reshape(image, [image.shape[0], image.shape[1], 1])
     image = image/255
     image = tf.image.resize(image, [28, 28], preserve_aspect_ratio=True)
