@@ -70,7 +70,7 @@ if image_file is not None:
     left = 10
     top = 80
     right = 180
-    bottom = 10
+    bottom = 40
  
     # Cropped image of above dimension
     # (It will not change original image)
