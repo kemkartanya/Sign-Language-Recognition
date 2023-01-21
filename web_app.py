@@ -67,7 +67,7 @@ if image_file is not None:
     width, height = image.size
  
     # Setting the points for cropped image
-    left = 5
+    left = 20
     top = height / 4
     right = 164
     bottom = 3 * height / 4
@@ -75,7 +75,7 @@ if image_file is not None:
     # Cropped image of above dimension
     # (It will not change original image)
     image = image.crop((left, top, right, bottom))
-    image = image.resize((28, 28))
+    #image = image.resize((28, 28))
     st.image(image)
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
