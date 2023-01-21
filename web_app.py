@@ -67,16 +67,16 @@ if image_file is not None:
     width, height = image.size
  
     # Setting the points for cropped image
-    left = 20
-    top = 100
-    right = 250
+    left = 30
+    top = 80
+    right = 300
     bottom = 386
  
     # Cropped image of above dimension
     # (It will not change original image)
     image = image.crop((left, top, right, bottom))
-    #image = image.resize((28, 28))
     st.image(image)
+    image = image.resize((28, 28))
     image = np.array(image, dtype='float32')
     letter = preprocess_image(image, image_file, best_model, label_binarizer)
     st.write(f'The image is predicted as {letter}')
