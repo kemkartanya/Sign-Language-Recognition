@@ -68,8 +68,8 @@ if image_file is not None:
  
     # Setting the points for cropped image
     left = 30
-    top = 80
-    right = 300
+    top = 100
+    right = 330
     bottom = 386
  
     # Cropped image of above dimension
