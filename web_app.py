@@ -68,7 +68,7 @@ if image_file is not None:
  
     # Setting the points for cropped image
     left = 50
-    top = 100
+    top = 20
     right = 200
     bottom = 200
  
